@@ -18,7 +18,7 @@ export class CarouselComponent {
 
     let newIndex = Math.floor(Math.random() * this.images.length);
     this.imageUrl = this.images[newIndex];
-    console.log(newIndex);
+    console.log(newIndex); // TODO: Fix this
   }
 }
 // Compare this snippet from src/app/components/small/carousel/carousel.component.ts:
