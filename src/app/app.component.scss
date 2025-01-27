@@ -1,9 +1,13 @@
-body {
+body, html {
     margin: 0;
     padding: 0;
+    height: 100%;
+    overflow: auto; /* Allow scrolling */
+    max-width: 100%; /* Ensure content does not exceed viewport width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 * {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: inherit; /* Inherit box-sizing from parent */
 }
-

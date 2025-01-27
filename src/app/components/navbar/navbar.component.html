@@ -1,4 +1,36 @@
-<ul>
-    <li><a href="">Home</a></li>
-    <li><a href="">Photos</a></li>
-</ul>
+<span class="navbar-toggle" (click)="toggleNavbar()" [class.white]="isNavbarVisible" [class.show]="isSpanVisible">
+    &#9776;
+</span>
+<div class="container">
+    <ul class="navbar" [class.show]="isNavbarVisible">
+        <li><a href="">Home</a></li>
+        <li><a href="">Photos</a></li>
+    </ul>
+</div>
+
+<style>
+
+    .navbar {
+        transform: translateY(-100%);
+        overflow: hidden;
+        transition: all 0.4s ease;
+    }
+    .navbar.show {
+        height: auto;
+        display: block;
+        transform: translateY(0%);
+    }
+    .navbar-toggle {
+        transform: translateX(-80%);
+        color: invert(#333);
+        transition: all 0.4s ease;
+    }
+    .navbar-toggle.show {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    .navbar-toggle.white {
+        color: white;
+        transform: rotate(90deg);
+    }
+</style>
